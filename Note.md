@@ -53,6 +53,22 @@
   .Public IPv4 addresses: Each subnet can be configured to automatically assign a public IPv4 address to the primary network
   interface of any instance launched within it, with the public IP address being linked to the instance's primary private 
   IP address through network address translation (NAT)
-  
-  
-  
+## 7.10, 7.11, 7.12, 7.13, 7.14
+  An elastic network interface is a virtual network interface with primary and secondary private IPv4 addresses, Elastic IP support, public IPv4 address option, IPv6 addresses, security groups, MAC address, source/destination check flag, and a description.
+  VPC Route Tables: A route table contains rules (routes) that determine where network traffic is directed within a VPC, with each route specifying a destination CIDR block and a target, including a default local route for internal communication, and each subnet in a VPC must be associated with a route table, with the main route table assigned automatically to control routing for unassociated subnets.
+  Internet Gateway: An internet gateway connects a VPC to the internet, allowing traffic routing and NAT for instances with public IPs, and to enable internet access for VPC subnets, you attach it, configure a route, assign unique IPs to instances, and set up proper security rules.
+  Network Address Translation (NAT):You can use a NAT device to enable instances in a private subnet to connect to the internet
+  NAT Gateway: NAT gateway lets private subnet instances use the internet without allowing incoming connections, requiring a public subnet, an unchangeable Elastic IP, and route table updates.
+  NAT Instance:NAT in a public subnet enables private subnet outbound traffic without inbound access; use egress-only gateway for IPv6.
+## 7.15, 7.16, 7.17,7.18, 7.19
+VPC Peering : VPC peering in AWS enables private network communication between two VPCs, with some restrictions like non-overlapping IP addresses and non-transitive peering.
+  VPC Endpoints: VPC endpoints provide private, secure connections to AWS services without the need for public IPs or traditional network components.
+  A transit gateway is a network transit hub that you can use to interconnect your virtual private clouds (VPC) and on-premises networks
+## 7.20 Security Groups for your VPC
+  AWS security groups control instance-level traffic in VPCs, where each instance can have its own set; default groups are used if not specified, and network ACLs offer added security.
+## 7.21 Network Access Control Lists (ACL)
+A network access control list (ACL) is an "optional" layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets
+## 7.22,7.23
+DNS: the Domain Name System
+Route 53: Cloud web service
+Amazon CloudFront: Network performance can affect website responsiveness, and Amazon CloudFront, a fast CDN service, improves it by delivering data globally with low latency and high speeds.
